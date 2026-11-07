@@ -14,7 +14,7 @@ Hook: **Pakar Signboard Termurah Kelantan**
 | 04 Popular & Cetak | 3 signboard paling laris (Backlit, Box Up, Lightboard) + 12 produk percetakan |
 | 05 Hasil kerja | Slider mendatar 6 projek (leret / seret / butang / anak panah) + 4 langkah cara tempah |
 | FAQ | 6 soalan lazim (sepadan dengan FAQPage dalam JSON-LD) |
-| 06 Hubungi | WhatsApp 013-537 3629, telefon 017-975 3629, alamat kedai Bachok, pendaftaran SSM/MOF |
+| 06 Hubungi | WhatsApp / telefon 013-537 3629, alamat kedai Bachok, Instagram, pendaftaran SSM/MOF |
 
 ## Struktur fail
 
@@ -33,9 +33,8 @@ assets/og-signboard-expert.jpg  Gambar perkongsian media sosial 1200×630
 
 ## Tetapan penting
 
-- **Nombor WhatsApp:** `js/main.js` → `const WHATSAPP_NUMBER = '60135373629';` (013-537 3629, akaun WhatsApp Business NMK).
-  Teks `013-537 3629` dan `contactPoint` dalam JSON-LD di `index.html` juga perlu dikemas kini jika bertukar.
-- **Nombor telefon:** 017-975 3629 (pautan `tel:` dan `telephone` dalam JSON-LD).
+- **Nombor WhatsApp:** `js/main.js` → `const WHATSAPP_NUMBER = '60135373629';` (013-537 3629, akaun WhatsApp Business NMK; juga nombor telefon).
+  Teks `013-537 3629`, pautan `tel:` serta `telephone` dan `contactPoint` dalam JSON-LD di `index.html` juga perlu dikemas kini jika bertukar.
 - **Warna tema:** pemboleh ubah di atas `css/style.css` (`--blue`, `--gold`, `--chrome-gold`, `--chrome-blue`, `--silver-face`, `--gold-face`).
 - **Cache pelayar:** pautan CSS/JS dalam `index.html` ada nombor versi (`style.css?v=20261107-3`).
   Setiap kali `css/style.css` atau `js/main.js` diubah, naikkan nombor itu supaya telefon pengunjung memuat turun fail baharu.
