@@ -1,8 +1,8 @@
 # Signboard Expert (NMK Maju Resources): Laman Web Rasmi (Cinematic Chrome)
 
 Laman web statik (HTML, CSS dan JS tanpa build). Reka letak ikut laman Haiyat (penceritaan babak 01–06 semasa skrol),
-dengan tema **hitam, emas dan biru elektrik** ikut logo NMK dan sentuhan **chrome**: teks logam berkilat,
-butang emas berkilau, garis chrome dan latar keluli berus (brushed steel) pada bahagian terang.
+dengan **latar putih**, warna **biru dan emas** ikut logo NMK, dan sentuhan **silver/chrome**: tajuk logam berkilat,
+butang emas dan silver berkilau, garis silver, serta latar keluli berus (brushed steel) pada bahagian berselang.
 
 Hook: **Pakar Signboard Termurah Kelantan**
 
@@ -24,7 +24,7 @@ index.html               Laman utama (SEO, Open Graph, JSON-LD)
 css/style.css            Gaya mobile-first (asas telefon, ≥700px tablet, ≥1024px desktop)
 js/main.js               WhatsApp, menu, penunjuk babak, animasi skrol, slider
 assets/*.webp            Foto produk dan hasil kerja (daripada laman lama signboardexpert.com)
-assets/logo-nmk.webp     Logo NMK lutsinar untuk hero (PNG sebagai sandaran: logo-nmk.png)
+assets/logo-nmk.webp     Logo NMK lutsinar untuk latar putih (PNG sebagai sandaran: logo-nmk.png)
 assets/logo-nmk-128.png  Logo kecil untuk navigasi / footer
 favicon.png, apple-touch-icon.png, icon-192.png
 robots.txt, sitemap.xml, llms.txt, netlify.toml, .nojekyll
@@ -34,8 +34,8 @@ robots.txt, sitemap.xml, llms.txt, netlify.toml, .nojekyll
 
 - **Nombor WhatsApp:** `js/main.js` → `const WHATSAPP_NUMBER = '60179753629';`
   (Nombor dalam teks `017-975 3629` dan `telephone` dalam JSON-LD di `index.html` juga perlu dikemas kini jika bertukar.)
-- **Warna tema:** pemboleh ubah di atas `css/style.css` (`--gold`, `--blue`, `--chrome`, `--chrome-gold`, `--chrome-blue`).
-- **Cache pelayar:** pautan CSS/JS dalam `index.html` ada nombor versi (`style.css?v=20261107-1`).
+- **Warna tema:** pemboleh ubah di atas `css/style.css` (`--blue`, `--gold`, `--chrome-gold`, `--chrome-blue`, `--silver-face`, `--gold-face`).
+- **Cache pelayar:** pautan CSS/JS dalam `index.html` ada nombor versi (`style.css?v=20261107-2`).
   Setiap kali `css/style.css` atau `js/main.js` diubah, naikkan nombor itu supaya telefon pengunjung memuat turun fail baharu.
 - **Preview tempatan:** buka melalui pelayan web (contoh `python3 -m http.server`), bukan terus dari fail,
   kerana kesan kilauan logo guna CSS mask yang disekat pelayar untuk `file://`.
