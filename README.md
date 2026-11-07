@@ -8,13 +8,13 @@ Hook: **Pakar Signboard Termurah Kelantan**
 
 | Babak | Kandungan |
 |---|---|
-| 01 Utama | Hero skrin penuh: logo NMK dengan kilauan chrome, tajuk "Pakar Signboard Termurah Kelantan", butang WhatsApp |
+| 01 Utama | Hero: foto signboard Mamaja Beauty HQ (separuh kanan), logo NMK berkilau, tajuk "Pakar Signboard Termurah Kelantan", butang WhatsApp |
 | 02 Tentang | NMK Maju Resources sejak 2019, 8 jenis signboard, 12 produk cetakan, foto bengkel di Bachok |
 | 03 Signboard | Senarai 8 jenis signboard; setiap baris terus ke WhatsApp dengan mesej jenis tersebut |
 | 04 Popular & Cetak | 3 signboard paling laris (Backlit, Box Up, Lightboard) + 12 produk percetakan |
 | 05 Hasil kerja | Slider mendatar 6 projek (leret / seret / butang / anak panah) + 4 langkah cara tempah |
 | FAQ | 6 soalan lazim (sepadan dengan FAQPage dalam JSON-LD) |
-| 06 Hubungi | WhatsApp 017-975 3629, alamat kedai Bachok, Instagram, pendaftaran SSM/MOF |
+| 06 Hubungi | WhatsApp 013-537 3629, telefon 017-975 3629, alamat kedai Bachok, pendaftaran SSM/MOF |
 
 ## Struktur fail
 
@@ -33,8 +33,9 @@ assets/og-signboard-expert.jpg  Gambar perkongsian media sosial 1200×630
 
 ## Tetapan penting
 
-- **Nombor WhatsApp:** `js/main.js` → `const WHATSAPP_NUMBER = '60179753629';`
-  (Nombor dalam teks `017-975 3629` dan `telephone` dalam JSON-LD di `index.html` juga perlu dikemas kini jika bertukar.)
+- **Nombor WhatsApp:** `js/main.js` → `const WHATSAPP_NUMBER = '60135373629';` (013-537 3629, akaun WhatsApp Business NMK).
+  Teks `013-537 3629` dan `contactPoint` dalam JSON-LD di `index.html` juga perlu dikemas kini jika bertukar.
+- **Nombor telefon:** 017-975 3629 (pautan `tel:` dan `telephone` dalam JSON-LD).
 - **Warna tema:** pemboleh ubah di atas `css/style.css` (`--blue`, `--gold`, `--chrome-gold`, `--chrome-blue`, `--silver-face`, `--gold-face`).
 - **Cache pelayar:** pautan CSS/JS dalam `index.html` ada nombor versi (`style.css?v=20261107-3`).
   Setiap kali `css/style.css` atau `js/main.js` diubah, naikkan nombor itu supaya telefon pengunjung memuat turun fail baharu.

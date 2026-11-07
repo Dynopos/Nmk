@@ -1,9 +1,9 @@
 // =====================================================================
 // TETAPAN WHATSAPP: tukar di sini sahaja.
 // Format Malaysia: 601XXXXXXXX (tanpa +, sengkang atau ruang).
-// Nombor rasmi: Signboard Expert / NMK Maju Resources 017-975 3629
+// Nombor WhatsApp rasmi: Signboard Expert / NMK Maju Resources 013-537 3629
 // =====================================================================
-const WHATSAPP_NUMBER = '60179753629';
+const WHATSAPP_NUMBER = '60135373629';
 const DEFAULT_MESSAGE = 'Assalamualaikum Signboard Expert, saya nak minta sebut harga.';
 
 const $ = (sel, root = document) => root.querySelector(sel);
