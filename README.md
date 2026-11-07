@@ -27,7 +27,8 @@ assets/*.webp            Foto produk dan hasil kerja (daripada laman lama signbo
 assets/logo-nmk.webp     Logo NMK lutsinar untuk latar putih (PNG sebagai sandaran: logo-nmk.png)
 assets/logo-nmk-128.png  Logo kecil untuk navigasi / footer
 favicon.png, apple-touch-icon.png, icon-192.png
-robots.txt, sitemap.xml, llms.txt, netlify.toml, .nojekyll
+robots.txt, sitemap.xml, llms.txt, manifest.webmanifest, netlify.toml, .nojekyll
+assets/og-signboard-expert.jpg  Gambar perkongsian media sosial 1200×630
 ```
 
 ## Tetapan penting
@@ -35,7 +36,7 @@ robots.txt, sitemap.xml, llms.txt, netlify.toml, .nojekyll
 - **Nombor WhatsApp:** `js/main.js` → `const WHATSAPP_NUMBER = '60179753629';`
   (Nombor dalam teks `017-975 3629` dan `telephone` dalam JSON-LD di `index.html` juga perlu dikemas kini jika bertukar.)
 - **Warna tema:** pemboleh ubah di atas `css/style.css` (`--blue`, `--gold`, `--chrome-gold`, `--chrome-blue`, `--silver-face`, `--gold-face`).
-- **Cache pelayar:** pautan CSS/JS dalam `index.html` ada nombor versi (`style.css?v=20261107-2`).
+- **Cache pelayar:** pautan CSS/JS dalam `index.html` ada nombor versi (`style.css?v=20261107-3`).
   Setiap kali `css/style.css` atau `js/main.js` diubah, naikkan nombor itu supaya telefon pengunjung memuat turun fail baharu.
 - **Preview tempatan:** buka melalui pelayan web (contoh `python3 -m http.server`), bukan terus dari fail,
   kerana kesan kilauan logo guna CSS mask yang disekat pelayar untuk `file://`.
@@ -68,23 +69,39 @@ Build command: *(kosong)*. Publish directory: `.`
 
 ## SEO & GEO (sudah dipasang)
 
-- Tajuk & meta description dengan kata kunci "Pakar Signboard Termurah Kelantan", `canonical`, `lang="ms-MY"`,
-  meta geo (MY-03 / Bachok), Open Graph & Twitter Card.
-- JSON-LD (`@graph`): Organization, LocalBusiness (alamat, peta, telefon, media sosial, katalog servis), WebSite, WebPage, FAQPage.
-- Seksyen Soalan Lazim yang kelihatan pada laman, sepadan dengan FAQPage.
-- `sitemap.xml` (dengan imej), `robots.txt` (benarkan Googlebot dan bot AI) dan `llms.txt` (ringkasan fakta untuk AI).
+**SEO dalam laman**
+- Tajuk 52 aksara ("Pakar Signboard Termurah Kelantan | Signboard Expert") dan meta description ~150 aksara
+  dengan kata kunci tempatan (signboard Kelantan / Kota Bharu / Bachok), `canonical`, `lang="ms-MY"`, meta geo MY-03.
+- Satu H1, H2 setiap babak, H3 untuk FAQ. Semua gambar ada `alt`, `width`/`height` dan `loading="lazy"`.
+- Gambar perkongsian khas `assets/og-signboard-expert.jpg` (1200×630) untuk WhatsApp, Facebook dan X.
+- Seksyen **Kawasan liputan** (10 jajahan Kelantan) dan alamat + telefon (NAP) dalam footer untuk SEO tempatan.
+- Gambar dimampatkan (aset ~2 MB), fon `display=swap`, logo hero di-preload.
+- `sitemap.xml` (dengan imej), `manifest.webmanifest`, `robots.txt`.
 
-**Perlu dibuat oleh pemilik (di luar laman):**
+**GEO (enjin carian AI: Google AI Overviews, ChatGPT, Perplexity, Gemini)**
+- JSON-LD `@graph`: Organization, LocalBusiness (alamat, peta, `areaServed` 10 jajahan, katalog 9 servis,
+  `alternateName`, `slogan`), WebSite, WebPage (dengan `speakable`), FAQPage 10 soalan.
+- **Soalan Lazim** 10 soalan yang kelihatan pada laman, sama tepat dengan FAQPage.
+- Kotak **Fakta ringkas** (nama, kepakaran, lokasi, kawasan, sejak, MOF, hubungi): format yang mudah dipetik AI.
+- `llms.txt`: ringkasan fakta dwibahasa, jadual fakta, servis, kawasan, harga, FAQ dan pautan.
+- `robots.txt` membenarkan bot AI (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended).
+
+**Perlu dibuat oleh pemilik (di luar laman, paling besar kesannya)**
 1. **Google Search Console:** https://search.google.com/search-console → *Add property → URL prefix* →
-   `https://dynopos.github.io/Nmk/` → sahkan, kemudian hantar `sitemap.xml` dan minta indexing.
-2. **Google Business Profile:** pastikan nama, alamat dan telefon **sama tepat** seperti di laman (NAP).
-   Alamat kedai ialah Bachok; laman lama menyebut Kota Bharu.
-3. **Bing Webmaster Tools:** import dari Search Console.
+   `https://dynopos.github.io/Nmk/` → pilih *HTML tag* → hantar tag itu untuk dimasukkan ke `<head>`.
+   Selepas disahkan: *Sitemaps* → hantar `sitemap.xml`, dan *URL Inspection* → *Request indexing*.
+2. **Google Business Profile** (faktor No.1 untuk Google Maps): https://business.google.com.
+   Kemas kini alamat ke **Bachok** (sama tepat seperti laman), letak pautan laman web, tambah waktu operasi,
+   kategori "Sign shop" / "Kedai papan tanda", dan muat naik foto hasil kerja terkini.
+3. **Bing Webmaster Tools** (ChatGPT search guna indeks Bing): https://www.bing.com/webmasters → import dari Search Console.
 4. Letak pautan laman web pada bio Facebook, Instagram dan TikTok.
+5. Minta ulasan Google **sebenar** daripada pelanggan (ulasan terkini kebanyakannya 3+ tahun lalu). Jangan cipta ulasan palsu.
+6. Bila pindah ke `signboardexpert.com`, tukar URL (lihat bahagian Deploy) dan tambah domain baharu dalam Search Console.
 
 ## Senarai semak sebelum go-live
 
-- [ ] **Waktu operasi** belum dimasukkan. Bila disahkan, tambah dalam seksyen Hubungi dan `openingHours` dalam JSON-LD.
+- [ ] **Waktu operasi** belum dimasukkan. Bila disahkan, tambah dalam seksyen Hubungi, kotak Fakta ringkas dan `openingHours` dalam JSON-LD.
+- [ ] **Kawasan liputan:** sahkan kesemua 10 jajahan memang diterima (terutama Gua Musang, Jeli, Kuala Krai).
 - [ ] **Emel** perniagaan (jika ada).
 - [ ] Penarafan Google (4.8★) disemak semula sebelum go-live.
 - [ ] Kenyataan "Termurah" ialah slogan pemilik; pastikan selaras dengan harga sebenar.

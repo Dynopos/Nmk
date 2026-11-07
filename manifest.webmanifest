@@ -1,0 +1,15 @@
+{
+  "name": "Signboard Expert (NMK Maju Resources)",
+  "short_name": "Signboard Expert",
+  "description": "Pakar Signboard Termurah Kelantan",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "ms-MY",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
