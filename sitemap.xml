@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://signboardexpert.com/</loc>
     <lastmod>2026-11-07</lastmod>
-    <priority>1.0</priority>
+    <image:image><image:loc>https://signboardexpert.com/assets/signboard_backlit_3.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/Wanpaku-Coffee-Signboard-Expert-Kota-Bharu.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/al-khayla-Signboard-Expert-Kota-Bharu.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/Mamaja-beauty-HQ-Signboard-Expert-Kota-Bharu.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/JKR-Project-Signboard-Expert-Kota-Bharu.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/signboard-zig-zag-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/3D-LED-Backlit-popular.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/3D-LED-Box-Up-Lettering-popular-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/Lightboard-popular.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/NMK-Maju-Resources-Signboard-Expert-Kota-Bharu-Kelantan.webp</image:loc></image:image>
+    <image:image><image:loc>https://signboardexpert.com/assets/logo-nmk.png</image:loc></image:image>
   </url>
 </urlset>
