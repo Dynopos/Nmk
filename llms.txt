@@ -20,8 +20,8 @@ Maklumat dikemas kini: 2026-11-07. Laman rasmi: https://dynopos.github.io/Nmk/
 
 ## Jenis signboard (lima kepakaran utama)
 
-- **LED Box Up:** huruf 3D bercahaya penuh, paling menonjol pada waktu malam. Contoh: KB Nasi Kandar, a&n mart, DRK, Uni Dental, E-Tronas, MZI Frozen Food.
-- **LED Backlit:** cahaya dari belakang huruf untuk kesan eksklusif. Contoh: Rasa Manis Cakes & Dessert (Ketereh), Star Coffee Pastry (Kota Bharu), Wana Beauty Mall HQ, Stegoland & Jasmine, Restoran Lake Sanno.
+- **LED Box Up:** huruf 3D bercahaya penuh, paling menonjol pada waktu malam. Contoh: KB Nasi Kandar (Jalan Sultan Yahya Petra, Kota Bharu), a&n mart, DRK, Uni Dental, E-Tronas, MZI Frozen Food.
+- **LED Backlit:** cahaya dari belakang huruf untuk kesan eksklusif. Contoh: Rasa Manis Cakes & Dessert (Ketereh), Star Coffee Pastry (Kota Bharu), Wana Beauty Mall HQ (Kg Panji, Kota Bharu), Stegoland & Jasmine, Restoran Lake Sanno (Kota Bharu).
 - **Signboard UV:** cetakan UV penuh warna terus pada papan; pilihan paling jimat. Contoh: Mamaja Beauty HQ (Tanah Merah), Wawa Pink & Arjuna Salon (Pasir Mas), Euro Auto Key Solution, Simpang 3 Frozen & Plastic (Bachok), Kubota Minda Agrimachinery.
 - **Signboard PVC 3D Foamboard:** huruf timbul PVC foamboard tanpa lampu; kemas dan tahan lama. Contoh: My Kopitiam & Gepuk Big Boss (Tanah Merah), Bahtera Kembara Holidays (Pasir Mas), 3 Abdul Roti Tempayan, Motosai King, PASTI Pintar Imtiyaz.
 - **Lightbox:** kotak bercahaya siang dan malam. Contoh: Co-opbank Pertama (Kota Bharu, Tanah Merah), Klinik Pergigian Hayat, Mediklinik Nusa Tok Bali, Shopee Xpress Service Point (Wakaf Bharu).
