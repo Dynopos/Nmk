@@ -20,7 +20,7 @@ Hook: **Pakar Signboard Termurah Kelantan**
 
 ```
 index.html               Laman utama (SEO, Open Graph, JSON-LD)
-404.html                 Halaman ralat (laluan mutlak "/", untuk domain sendiri)
+404.html                 Halaman ralat (laluan mutlak /Nmk/ untuk GitHub Pages)
 css/style.css            Gaya mobile-first (asas telefon, ≥700px tablet, ≥1024px desktop)
 js/main.js               WhatsApp, menu, penunjuk babak, animasi skrol, slider
 assets/*.webp            Foto produk dan hasil kerja (daripada laman lama signboardexpert.com)
@@ -40,19 +40,31 @@ robots.txt, sitemap.xml, llms.txt, netlify.toml, .nojekyll
 - **Preview tempatan:** buka melalui pelayan web (contoh `python3 -m http.server`), bukan terus dari fail,
   kerana kesan kilauan logo guna CSS mask yang disekat pelayar untuk `file://`.
 
-## Deploy
+## Deploy (GitHub Pages)
 
-**Netlify (drag & drop):** https://app.netlify.com → *Add new site → Deploy manually* → seret seluruh folder projek.
+Laman rasmi: **https://dynopos.github.io/Nmk/**
 
-**Netlify melalui GitHub:** *Add new site → Import an existing project → GitHub* → pilih repo.
+Repo → *Settings → Pages* → *Build and deployment* → *Source: Deploy from a branch* →
+branch `main`, folder `/ (root)` → *Save*. Laman akan online dalam 1–2 minit.
+Setiap push ke `main` akan deploy semula secara automatik.
+
+Jika deploy gagal / tersangkut: semak https://github.com/Dynopos/Nmk/actions (run "pages build and deployment").
+Ralat "due to in progress deployment" bermakna deploy lama masih berjalan: tunggu, atau *Cancel workflow*
+kemudian *Re-run failed jobs* pada run terbaru.
+
+**Nota:** enjin carian membaca `robots.txt` di akar domain (`dynopos.github.io/robots.txt`), bukan dalam folder ini,
+jadi sitemap mesti dihantar melalui Google Search Console.
+
+### Pindah ke domain sendiri (signboardexpert.com) kemudian
+
+1. Tambah fail `CNAME` berisi `signboardexpert.com`, dan isi *Custom domain* dalam *Settings → Pages*.
+2. Di tempat domain didaftarkan, halakan DNS ke GitHub Pages (rekod A ke 185.199.108.153, 185.199.109.153,
+   185.199.110.153, 185.199.111.153, dan CNAME `www` ke `dynopos.github.io`). Laman WordPress lama akan diganti.
+3. Tukar semua `https://dynopos.github.io/Nmk/` dalam `index.html`, `sitemap.xml`, `robots.txt`, `llms.txt`
+   ke `https://signboardexpert.com/`, dan laluan `/Nmk/` dalam `404.html` ke `/`.
+
+**Netlify (alternatif):** https://app.netlify.com → *Add new site → Import an existing project → GitHub* → pilih repo.
 Build command: *(kosong)*. Publish directory: `.`
-
-**GitHub Pages:** Repo → *Settings → Pages* → *Deploy from a branch* → pilih branch dan folder `/ (root)`.
-Laman utama guna laluan relatif, jadi berfungsi di sub-folder. `404.html` guna laluan mutlak `/`
-(untuk domain sendiri `signboardexpert.com`).
-
-**Domain:** semua URL kanonik, Open Graph, `sitemap.xml`, `robots.txt` dan `llms.txt` guna `https://signboardexpert.com/`.
-Halakan DNS domain itu ke hosting baharu. Jika guna domain lain, tukar URL tersebut.
 
 ## SEO & GEO (sudah dipasang)
 
@@ -63,7 +75,8 @@ Halakan DNS domain itu ke hosting baharu. Jika guna domain lain, tukar URL terse
 - `sitemap.xml` (dengan imej), `robots.txt` (benarkan Googlebot dan bot AI) dan `llms.txt` (ringkasan fakta untuk AI).
 
 **Perlu dibuat oleh pemilik (di luar laman):**
-1. **Google Search Console:** tambah domain, hantar `sitemap.xml`, minta indexing.
+1. **Google Search Console:** https://search.google.com/search-console → *Add property → URL prefix* →
+   `https://dynopos.github.io/Nmk/` → sahkan, kemudian hantar `sitemap.xml` dan minta indexing.
 2. **Google Business Profile:** pastikan nama, alamat dan telefon **sama tepat** seperti di laman (NAP).
    Alamat kedai ialah Bachok; laman lama menyebut Kota Bharu.
 3. **Bing Webmaster Tools:** import dari Search Console.

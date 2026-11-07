@@ -26,4 +26,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://signboardexpert.com/sitemap.xml
+Sitemap: https://dynopos.github.io/Nmk/sitemap.xml
