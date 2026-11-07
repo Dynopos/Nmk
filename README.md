@@ -35,8 +35,13 @@ assets/og-signboard-expert.jpg  Gambar perkongsian media sosial 1200×630
 
 - **Nombor WhatsApp:** `js/main.js` → `const WHATSAPP_NUMBER = '60135373629';` (013-537 3629, akaun WhatsApp Business NMK; juga nombor telefon).
   Teks `013-537 3629`, pautan `tel:` serta `telephone` dan `contactPoint` dalam JSON-LD di `index.html` juga perlu dikemas kini jika bertukar.
+- **Lagu (voice note):** pemain dalam hero + butang mini "Lagu NMK" di penjuru kiri bawah. Lagu (33 saat) bermula pada
+  **sentuhan / klik pertama di mana-mana** pada halaman dan dimainkan **sekali sahaja** (pelayar tidak benarkan auto-main tanpa interaksi).
+  Fail: `assets/audio/lagu-nmk.ogg` (Opus) + `lagu-nmk.m4a` (AAC untuk iPhone/Safari). Untuk tukar lagu, ganti kedua-dua fail (nama sama)
+  dan kemas kini `FALLBACK_DURATION` dalam `js/main.js` serta `0:33` / `max="33"` dalam `index.html`.
+  Untuk matikan auto-main, buang baris `armAutoStart();` dalam `js/main.js`.
 - **Warna tema:** pemboleh ubah di atas `css/style.css` (`--blue`, `--gold`, `--chrome-gold`, `--chrome-blue`, `--silver-face`, `--gold-face`).
-- **Cache pelayar:** pautan CSS/JS dalam `index.html` ada nombor versi (`style.css?v=20261107-3`).
+- **Cache pelayar:** pautan CSS/JS dalam `index.html` ada nombor versi (`style.css?v=20261107-9`).
   Setiap kali `css/style.css` atau `js/main.js` diubah, naikkan nombor itu supaya telefon pengunjung memuat turun fail baharu.
 - **Preview tempatan:** buka melalui pelayan web (contoh `python3 -m http.server`), bukan terus dari fail,
   kerana kesan kilauan logo guna CSS mask yang disekat pelayar untuk `file://`.

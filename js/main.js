@@ -40,6 +40,7 @@ function onScroll(){
   topbar.classList.toggle('solid', y > 40 || siteNav.classList.contains('open'));
   pastHero = y > hero.offsetHeight * 0.6;
   waFloat.classList.toggle('show', pastHero);
+  updateMini();
   const max = document.documentElement.scrollHeight - window.innerHeight;
   progressBar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
 }
@@ -244,6 +245,85 @@ if ('IntersectionObserver' in window) {
   box.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') show(idx + 1);
     if (e.key === 'ArrowLeft') show(idx - 1);
+  });
+})();
+
+/* ---------- Voice note lagu ---------- */
+const voice = $('#voice-note');
+const audio = $('#vn-audio');
+const mini = $('#vn-mini');
+let voiceStarted = false;
+
+function updateMini(){
+  if (!mini) return;
+  mini.classList.toggle('show', voiceStarted && pastHero);
+}
+
+(function setupVoiceNote(){
+  if (!voice || !audio) return;
+  const playBtn = $('#vn-play');
+  const seek = $('#vn-seek');
+  const timeEl = $('#vn-time');
+  const bars = $$('.vn-bars i', voice);
+  const FALLBACK_DURATION = 33; // saat (panjang lagu)
+  const dur = () => (isFinite(audio.duration) && audio.duration > 0) ? audio.duration : FALLBACK_DURATION;
+  const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+
+  function setPlaying(on){
+    voice.classList.toggle('playing', on);
+    playBtn.setAttribute('aria-pressed', String(on));
+    playBtn.setAttribute('aria-label', on ? 'Jeda lagu Signboard Expert' : 'Main lagu Signboard Expert');
+    mini.classList.toggle('paused', !on);
+    mini.setAttribute('aria-label', on ? 'Jeda lagu Signboard Expert' : 'Sambung lagu Signboard Expert');
+  }
+
+  function toggle(){
+    if (audio.paused) {
+      voiceStarted = true;
+      audio.play().catch(() => setPlaying(false));
+    } else {
+      audio.pause();
+    }
+    updateMini();
+  }
+
+  function paint(){
+    const d = dur();
+    const t = audio.currentTime;
+    const lit = Math.round((t / d) * bars.length);
+    bars.forEach((b, i) => b.classList.toggle('on', i < lit));
+    seek.value = t;
+    timeEl.textContent = (t > 0 && !audio.ended) ? fmt(t) : fmt(Math.round(d));
+  }
+
+  playBtn.addEventListener('click', toggle);
+  mini.addEventListener('click', toggle);
+  audio.addEventListener('play', () => setPlaying(true));
+  audio.addEventListener('pause', () => setPlaying(false));
+  audio.addEventListener('ended', () => { setPlaying(false); audio.currentTime = 0; voiceStarted = false; updateMini(); paint(); });
+  audio.addEventListener('timeupdate', paint);
+  audio.addEventListener('loadedmetadata', () => { seek.max = dur(); paint(); });
+
+  // Lagu bermula sebaik pengunjung menyentuh / klik di mana-mana (sekali sahaja, tanpa ulangan).
+  // Pelayar tidak membenarkan audio bermula tanpa interaksi; skrol sahaja tidak dikira.
+  const unlockEvents = ['pointerdown', 'touchend', 'click', 'keydown'];
+  function autoStart(e){
+    unlockEvents.forEach(t => document.removeEventListener(t, autoStart, true));
+    if (voiceStarted) return;
+    if (e.target.closest && e.target.closest('#voice-note, #vn-mini')) return; // butang sendiri yang uruskan
+    if (e.type === 'keydown' && ['Tab', 'Shift', 'Escape'].includes(e.key)) { armAutoStart(); return; }
+    voiceStarted = true;
+    audio.play().then(updateMini).catch(() => { voiceStarted = false; setPlaying(false); armAutoStart(); });
+  }
+  function armAutoStart(){ unlockEvents.forEach(t => document.addEventListener(t, autoStart, { capture: true, passive: true })); }
+  armAutoStart();
+
+  seek.addEventListener('input', () => {
+    voiceStarted = true;
+    if (audio.readyState === 0) audio.load();
+    audio.currentTime = parseFloat(seek.value);
+    paint();
+    updateMini();
   });
 })();
 

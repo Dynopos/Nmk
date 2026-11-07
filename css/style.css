@@ -623,3 +623,37 @@ em,i{font-style:italic}
   .work-cap{padding:28px 8px 8px;font-size:8.5px;letter-spacing:.06em}
   .work-cap b{font-size:13px}
 }
+
+/* ---------- Voice note lagu (hero) ---------- */
+.voice-note{display:flex;align-items:center;gap:12px;width:100%;max-width:400px;margin-top:22px;padding:9px 12px 9px 9px;background:var(--silver-face);border:1px solid var(--silver2);border-radius:28px 28px 28px 8px;box-shadow:inset 0 1px 0 #fff,0 14px 34px rgba(11,26,51,.12)}
+.vn-play{flex:0 0 46px;width:46px;height:46px;border-radius:50%;border:1px solid #d39b17;background:var(--gold-face);color:#1b1200;display:grid;place-items:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.7);transition:transform .25s var(--ease),filter .25s}
+.vn-play:hover{transform:scale(1.05);filter:brightness(1.05)}
+.vn-play svg{width:20px;height:20px}
+.vn-play .i-pause,.voice-note.playing .vn-play .i-play{display:none}
+.voice-note.playing .vn-play .i-pause{display:block}
+.vn-body{flex:1;min-width:0}
+.vn-wave{position:relative;height:30px;border-radius:4px}
+.vn-wave:focus-within{outline:2px solid var(--blue);outline-offset:3px}
+.vn-bars{display:flex;align-items:center;gap:2px;height:100%}
+.vn-bars i{flex:1;min-width:2px;height:var(--h);min-height:3px;border-radius:2px;background:var(--silver3);transition:background .2s}
+.vn-bars i.on{background:linear-gradient(180deg,var(--blue-light),var(--blue))}
+.vn-seek{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.vn-meta{display:flex;justify-content:space-between;gap:10px;margin-top:5px;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--muted)}
+.vn-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase;letter-spacing:.14em}
+.vn-time{font-variant-numeric:tabular-nums}
+.vn-avatar{position:relative;flex:0 0 44px;width:44px;height:44px}
+.vn-avatar img{width:100%;height:100%;object-fit:contain;padding:5px;border-radius:50%;background:#fff;border:1px solid var(--silver2);transition:box-shadow .4s}
+.vn-avatar svg{position:absolute;right:-3px;bottom:-3px;width:18px;height:18px;padding:3px;border-radius:50%;background:var(--blue);color:#fff}
+.voice-note.playing .vn-avatar img{box-shadow:0 0 0 4px rgba(63,162,255,.18),0 0 22px rgba(224,162,26,.45)}
+.vn-mini{position:fixed;z-index:70;left:14px;bottom:calc(14px + env(safe-area-inset-bottom));display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 15px;border:1px solid var(--silver2);background:var(--silver-face);color:var(--blue-deep);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;box-shadow:inset 0 1px 0 #fff,0 14px 34px rgba(11,26,51,.22);transform:translateY(160%);transition:transform .5s var(--ease)}
+.vn-mini.show{transform:none}
+.vn-mini-label{display:none}
+.eq{display:flex;align-items:flex-end;gap:2px;height:16px}
+.eq i{width:3px;height:100%;background:currentColor;transform-origin:bottom;animation:eq 1s ease-in-out infinite alternate}
+.eq i:nth-child(2){animation-delay:-.4s}
+.eq i:nth-child(3){animation-delay:-.7s}
+.eq i:nth-child(4){animation-delay:-.2s}
+.vn-mini.paused .eq i{animation-play-state:paused;transform:scaleY(.3)}
+@keyframes eq{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
+@media (min-width:700px){.vn-mini-label{display:inline}}
+@media (prefers-reduced-motion:reduce){.eq i{animation:none}}
