@@ -187,6 +187,66 @@ if ('IntersectionObserver' in window) {
   render();
 })();
 
+/* ---------- Galeri pelanggan: lihat semua + lightbox ---------- */
+(function setupWorks(){
+  const grid = $('#works-grid');
+  if (!grid) return;
+  const more = $('#works-more');
+  const items = $$('li', grid);
+  const chips = $$('.chip-f');
+  const LIMIT = 12; // bilangan gambar awal bagi tapisan "Semua"
+  let filter = 'semua';
+  let expanded = false;
+
+  function apply(){
+    let shown = 0;
+    items.forEach(li => {
+      const match = filter === 'semua' || li.dataset.cat === filter;
+      const visible = match && (filter !== 'semua' || expanded || shown < LIMIT);
+      li.hidden = !visible;
+      if (visible) shown++;
+    });
+    if (more) {
+      more.hidden = filter !== 'semua' || expanded || items.length <= LIMIT;
+      more.setAttribute('aria-expanded', String(expanded));
+    }
+    chips.forEach(c => c.setAttribute('aria-pressed', String(c.dataset.filter === filter)));
+  }
+  chips.forEach(c => c.addEventListener('click', () => { filter = c.dataset.filter; apply(); }));
+  if (more) more.addEventListener('click', () => { expanded = true; apply(); });
+  apply();
+
+  const box = $('#lightbox');
+  if (!box || typeof box.showModal !== 'function') return; // tanpa sokongan: pautan terus buka gambar
+  const img = $('#lb-img');
+  const cap = $('#lb-cap');
+  const allLinks = $$('.work-item', grid);
+  let links = allLinks;
+  let idx = 0;
+  function show(i){
+    idx = (i + links.length) % links.length;
+    const a = links[idx];
+    img.src = a.getAttribute('href');
+    img.alt = $('img', a).alt;
+    cap.innerHTML = a.dataset.caption || '';
+  }
+  allLinks.forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    // Navigasi lightbox hanya melalui gambar dalam tapisan semasa
+    links = allLinks.filter(l => filter === 'semua' || l.closest('li').dataset.cat === filter);
+    show(links.indexOf(a));
+    box.showModal();
+  }));
+  $('#lb-close').addEventListener('click', () => box.close());
+  $('#lb-prev').addEventListener('click', () => show(idx - 1));
+  $('#lb-next').addEventListener('click', () => show(idx + 1));
+  box.addEventListener('click', e => { if (e.target === box) box.close(); });
+  box.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') show(idx + 1);
+    if (e.key === 'ArrowLeft') show(idx - 1);
+  });
+})();
+
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', onScroll);

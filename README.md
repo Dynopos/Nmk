@@ -11,8 +11,8 @@ Hook: **Pakar Signboard Termurah Kelantan**
 | 01 Utama | Hero: gambar kedai Signboard Expert dengan trak kren NMK (bingkai chrome), logo NMK berkilau, tajuk "Pakar Signboard Termurah Kelantan", butang WhatsApp |
 | 02 Tentang | NMK Maju Resources sejak 2019, 8 jenis signboard, 12 produk cetakan, foto bengkel di Bachok |
 | 03 Signboard | Senarai 8 jenis signboard; setiap baris terus ke WhatsApp dengan mesej jenis tersebut |
-| 04 Popular & Cetak | 3 signboard paling laris (Backlit, Box Up, Lightboard) + 12 produk percetakan |
-| 05 Hasil kerja | Slider mendatar 6 projek pelanggan (Mamaja Beauty HQ, Wanpaku Coffee, Yellow Bamboo, al-Khayla, JKR, zig-zag) (leret / seret / butang / anak panah) + 4 langkah cara tempah |
+| 04 Popular & Cetak | 3 signboard paling laris (Backlit, Box Up, Lightbox) + 12 produk percetakan |
+| 05 Hasil kerja | Slider 8 projek pilihan + galeri 38 projek pelanggan dengan tapisan 5 kategori (LED Box Up, LED Backlit, Signboard UV, PVC 3D Foamboard, Lightbox) dan lightbox; foto penuh di `assets/projek-*.webp`, thumbnail di `assets/thumb/` (leret / seret / butang / anak panah) + 4 langkah cara tempah |
 | FAQ | 6 soalan lazim (sepadan dengan FAQPage dalam JSON-LD) |
 | 06 Hubungi | WhatsApp / telefon 013-537 3629, alamat kedai Bachok, Instagram, pendaftaran SSM/MOF |
 

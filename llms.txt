@@ -1,8 +1,8 @@
 # Signboard Expert (NMK Maju Resources)
 
-> Signboard Expert ialah jenama NMK Maju Resources (SSM 201903329354 / KT0457318-M), kedai signboard dan percetakan di Bachok, Kelantan, Malaysia, beroperasi sejak 2019. Slogan: "Pakar Signboard Termurah Kelantan". Mereka, membuat dan memasang signboard 3D LED, backlit, lightboard, billboard dan papan tanda projek, serta menyediakan percetakan. Menerima tempahan dari seluruh Kelantan, termasuk Kota Bharu. Pembekal berdaftar Kementerian Kewangan Malaysia (MOF).
+> Signboard Expert ialah jenama NMK Maju Resources (SSM 201903329354 / KT0457318-M), kedai signboard dan percetakan di Bachok, Kelantan, Malaysia, beroperasi sejak 2019. Slogan: "Pakar Signboard Termurah Kelantan". Mereka, membuat dan memasang signboard 3D LED, backlit, lightbox, billboard dan papan tanda projek, serta menyediakan percetakan. Menerima tempahan dari seluruh Kelantan, termasuk Kota Bharu. Pembekal berdaftar Kementerian Kewangan Malaysia (MOF).
 
-English summary: Signboard Expert (NMK Maju Resources) is a signboard and printing shop in Bachok, Kelantan, Malaysia, operating since 2019, with the slogan "Pakar Signboard Termurah Kelantan" (Kelantan's cheapest signboard expert). It designs, fabricates and installs 3D LED box-up lettering, 3D LED backlit signs, lightboards, 3D signs, standard signs, zig-zag signs, billboards and project information boards, and offers general printing (banners, buntings, flyers, posters, business cards, wedding cards, product stickers, bill books, rubber stamps, button badges, name tags, t-shirt printing). It accepts orders from all of Kelantan, including Kota Bharu. It is a registered Malaysian Ministry of Finance (MOF) supplier and has built project signboards for JKR. Prices are quoted per job via WhatsApp +60 13-537 3629.
+English summary: Signboard Expert (NMK Maju Resources) is a signboard and printing shop in Bachok, Kelantan, Malaysia, operating since 2019, with the slogan "Pakar Signboard Termurah Kelantan" (Kelantan's cheapest signboard expert). It designs, fabricates and installs 3D LED box-up lettering, 3D LED backlit signs, lightboxs, 3D signs, standard signs, zig-zag signs, billboards and project information boards, and offers general printing (banners, buntings, flyers, posters, business cards, wedding cards, product stickers, bill books, rubber stamps, button badges, name tags, t-shirt printing). It accepts orders from all of Kelantan, including Kota Bharu. It is a registered Malaysian Ministry of Finance (MOF) supplier and has built project signboards for JKR. Prices are quoted per job via WhatsApp +60 13-537 3629.
 
 Maklumat dikemas kini: 2026-11-07. Laman rasmi: https://dynopos.github.io/Nmk/
 
@@ -18,16 +18,16 @@ Maklumat dikemas kini: 2026-11-07. Laman rasmi: https://dynopos.github.io/Nmk/
 | WhatsApp / telefon | +60 13-537 3629 |
 | Penarafan | 4.8★ di Google |
 
-## Jenis signboard
+## Jenis signboard (lima kepakaran utama)
 
-- **3D LED Box Up Lettering:** huruf 3D bercahaya penuh, paling menonjol pada waktu malam.
-- **3D LED Backlit:** cahaya dari belakang huruf untuk kesan eksklusif dan moden.
-- **Lightboard:** papan bercahaya yang kelihatan 24 jam; grafik mudah ditukar; cekap tenaga dan jimat kos jangka panjang.
-- **Signboard 3D:** huruf timbul tanpa lampu, profesional dan tahan lama.
-- **Signboard biasa (standard):** pilihan paling asas dan kos efektif untuk kedai dan gerai.
-- **Signboard zig-zag:** reka bentuk unik yang mudah dilihat dari jauh.
-- **Billboard:** papan iklan besar di lokasi strategik.
-- **Signboard projek:** papan maklumat projek untuk kontraktor dan agensi kerajaan (contoh: projek JKR).
+- **LED Box Up:** huruf 3D bercahaya penuh, paling menonjol pada waktu malam. Contoh: KB Nasi Kandar, a&n mart, DRK, Uni Dental, E-Tronas, MZI Frozen Food.
+- **LED Backlit:** cahaya dari belakang huruf untuk kesan eksklusif. Contoh: Rasa Manis Cakes & Dessert (Ketereh), Star Coffee Pastry (Kota Bharu), Wana Beauty Mall HQ, Stegoland & Jasmine, Restoran Lake Sanno.
+- **Signboard UV:** cetakan UV penuh warna terus pada papan; pilihan paling jimat. Contoh: Mamaja Beauty HQ (Tanah Merah), Wawa Pink & Arjuna Salon (Pasir Mas), Euro Auto Key Solution, Simpang 3 Frozen & Plastic (Bachok), Kubota Minda Agrimachinery.
+- **Signboard PVC 3D Foamboard:** huruf timbul PVC foamboard tanpa lampu; kemas dan tahan lama. Contoh: My Kopitiam & Gepuk Big Boss (Tanah Merah), Bahtera Kembara Holidays (Pasir Mas), 3 Abdul Roti Tempayan, Motosai King, PASTI Pintar Imtiyaz.
+- **Lightbox:** kotak bercahaya siang dan malam. Contoh: Co-opbank Pertama (Kota Bharu, Tanah Merah), Klinik Pergigian Hayat, Mediklinik Nusa Tok Bali, Shopee Xpress Service Point (Wakaf Bharu).
+- **Lain-lain:** signboard zig-zag, billboard dan papan tanda projek (contoh: projek JKR).
+
+Portfolio di laman web: 38 projek pelanggan di seluruh Kelantan.
 
 ## Percetakan
 
@@ -50,8 +50,8 @@ Harga bergantung pada jenis, saiz, bahan dan lokasi pemasangan. Sebut harga dibe
 
 ## Soalan lazim
 
-- **Signboard mana yang paling jimat?** Signboard biasa (standard) paling kos efektif; lightboard jimat dalam jangka panjang kerana grafik boleh ditukar.
-- **Apa beza Box Up, Backlit dan lightboard?** Box Up: huruf 3D bercahaya penuh. Backlit: cahaya dari belakang huruf. Lightboard: papan bercahaya dengan grafik boleh tukar.
+- **Signboard mana yang paling jimat?** Signboard biasa (standard) paling kos efektif; lightbox jimat dalam jangka panjang kerana grafik boleh ditukar.
+- **Apa beza Box Up, Backlit dan lightbox?** Box Up: huruf 3D bercahaya penuh. Backlit: cahaya dari belakang huruf. Lightbox: papan bercahaya dengan grafik boleh tukar.
 - **Ada sediakan reka bentuk?** Ya, reka bentuk custom ikut logo dan warna jenama, disediakan bersama sebut harga.
 - **Boleh bekal kepada kerajaan?** Ya, berdaftar MOF; pernah siapkan papan tanda projek JKR.
 - **Terima tempahan dari Kota Bharu?** Ya, dan dari seluruh Kelantan.
